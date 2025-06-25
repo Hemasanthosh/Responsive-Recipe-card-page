@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Recipe Card Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .recipe-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .recipe-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .recipe-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .recipe-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .recipe-content {
+      padding: 15px;
+    }
+    .recipe-content h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #444;
+    }
+    .recipe-content p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .ingredients, .instructions {
+      margin-top: 10px;
+    }
+    .ingredients ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      color: #555;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 600px) {
+      .recipe-card img {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Delicious Recipe Collection</h1>
+
+  <div class="recipe-container">
+    <!-- Recipe Card 1 -->
+    <div class="recipe-card">
+      <img src="https://source.unsplash.com/400x300/?pasta" alt="Pasta">
+      <div class="recipe-content">
+        <h2>Classic Spaghetti</h2>
+        <p>A traditional Italian pasta dish made with tomato sauce and herbs.</p>
+        <div class="ingredients">
+          <strong>Ingredients:</strong>
+          <ul>
+            <li>Spaghetti</li>
+            <li>Tomato Sauce</li>
+            <li>Garlic, Basil</li>
+            <li>Olive Oil</li>
+          </ul>
+        </div>
+        <div class="instructions">
+          <strong>Instructions:</strong>
+          <p>Boil spaghetti, sauté garlic in olive oil, add tomato sauce and herbs, then mix with pasta.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recipe Card 2 -->
+    <div class="recipe-card">
+      <img src="https://source.unsplash.com/400x300/?salad" alt="Salad">
+      <div class="recipe-content">
+        <h2>Fresh Garden Salad</h2>
+        <p>A refreshing mix of lettuce, tomatoes, cucumbers, and carrots with vinaigrette.</p>
+        <div class="ingredients">
+          <strong>Ingredients:</strong>
+          <ul>
+            <li>Lettuce</li>
+            <li>Tomatoes</li>
+            <li>Cucumber</li>
+            <li>Carrots</li>
+          </ul>
+        </div>
+        <div class="instructions">
+          <strong>Instructions:</strong>
+          <p>Chop vegetables, toss them in a bowl, and drizzle with your favorite dressing.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recipe Card 3 -->
+    <div class="recipe-card">
+      <img src="https://source.unsplash.com/400x300/?dessert" alt="Dessert">
+      <div class="recipe-content">
+        <h2>Chocolate Lava Cake</h2>
+        <p>A rich, warm chocolate cake with a gooey molten center.</p>
+        <div class="ingredients">
+          <strong>Ingredients:</strong>
+          <ul>
+            <li>Dark Chocolate</li>
+            <li>Butter</li>
+            <li>Sugar</li>
+            <li>Eggs</li>
+            <li>Flour</li>
+          </ul>
+        </div>
+        <div class="instructions">
+          <strong>Instructions:</strong>
+          <p>Melt chocolate with butter, mix with sugar, eggs, and flour, then bake for 10 minutes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
